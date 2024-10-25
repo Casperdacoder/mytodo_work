@@ -1,0 +1,237 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Updated font */
+}
+
+body {
+    background: linear-gradient(to bottom right, #f4f7fa, #e1e8f0); /* Gradient background */
+    color: #333; /* Darker text for better contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 12px; /* More pronounced rounded corners */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Softer shadow */
+    padding: 30px;
+    width: 100%;
+    max-width: 600px;
+    transition: transform 0.3s, box-shadow 0.3s; /* Add a hover effect */
+}
+
+.container:hover {
+    transform: translateY(-5px); /* Slightly lift on hover */
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
+h1 {
+    text-align: center;
+    color: #4a90e2;
+    margin-bottom: 20px;
+    font-size: 28px; /* Larger heading */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 1px; /* Space between letters */
+}
+
+.task-form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.task-form input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: border 0.3s, box-shadow 0.3s; /* Transition for focus effect */
+}
+
+.task-form input[type="text"]:focus {
+    border: 1px solid #4a90e2; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(74, 144, 226, 0.5); /* Glow effect on focus */
+}
+
+.task-form button {
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, transform 0.2s; /* Include a scale effect */
+}
+
+.task-form button:hover {
+    background-color: #357ab8;
+    transform: translateY(-2px); /* Lift button on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-table th,
+.task-table td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-table th {
+    background-color: #4a90e2;
+    color: white;
+    font-weight: bold; /* Bold headers */
+}
+
+.task-table tbody tr:hover {
+    background-color: rgba(74, 144, 226, 0.1); /* Light hover effect */
+    transition: background-color 0.2s; /* Smooth transition */
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.actions form {
+    margin-right: 10px;
+}
+
+.actions button {
+    padding: 8px 12px;
+    background-color: #e94e77;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Scale effect */
+}
+
+.actions button:hover {
+    background-color: #c0394b;
+    transform: translateY(-2px); /* Lift button on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+.completed {
+    text-decoration: line-through;
+    color: #aaa;
+}
+
+.edit-form {
+    margin-top: 10px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s; /* Smooth transition for background */
+}
+
+.edit-form:hover {
+    background-color: #eaf4fa; /* Light hover effect */
+}
+
+.edit-form input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.edit-form .button-container {
+    display: flex;
+    justify-content: space-between; /* Space between buttons */
+}
+
+.edit-form button {
+    padding: 12px;
+    background-color: #4a90e2;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s; /* Scale effect */
+    width: 48%; /* Set to take up half of the button container */
+}
+
+.edit-form button:hover {
+    background-color: #357ab8;
+    transform: translateY(-2px); /* Lift button on hover */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Shadow on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .task-form {
+        flex-direction: column;
+    }
+
+    .task-form button {
+        width: 100%;
+    }
+
+    .edit-form input[type="text"] {
+        width: 100%;
+    }
+
+    .edit-form .button-container {
+        flex-direction: column; /* Stack buttons on small screens */
+    }
+
+    .edit-form button {
+        width: 100%; /* Full width for mobile */
+        margin-bottom: 5px; /* Space between buttons */
+    }
+
+    .actions {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .actions button {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
+    .actions form {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    .task-form input[type="text"],
+    .edit-form input[type="text"] {
+        font-size: 14px;
+    }
+
+    .task-table th,
+    .task-table td {
+        font-size: 14px;
+    }
+
+    .task-table th {
+        font-size: 16px;
+    }
+
+    .task-form button,
+    .edit-form button {
+        font-size: 14px;
+    }
+}

@@ -1,0 +1,97 @@
+/* Basic reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styling */
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #f7f9fc; /* Very light gray-blue background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Container styling */
+.container {
+  background-color: #ffffff; /* White background for form */
+  padding: 2rem;
+  border-radius: 16px; /* More rounded corners */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  width: 360px; /* Width of the form */
+  text-align: center; /* Center the text */
+}
+
+/* Heading */
+.container h1 {
+  margin-bottom: 1.5rem;
+  color: #4a4a4a; /* Dark gray for better readability */
+  font-size: 1.6rem; /* Slightly larger heading */
+}
+
+/* Error message */
+.error-message {
+  background-color: #ffe6e6; /* Light red background */
+  color: #a94442; /* Darker red text */
+  border: 1px solid #f2b2b2; /* Light red border */
+  padding: 10px;
+  margin-bottom: 1rem;
+  border-radius: 8px; /* Rounded corners */
+}
+
+/* Input fields */
+.container input[type="text"],
+.container input[type="email"],
+.container input[type="password"] {
+  width: 100%;
+  padding: 14px; /* Increased padding for comfort */
+  margin: 0.75rem 0; /* More space between inputs */
+  border: 1px solid #c4e3f0; /* Soft blue border */
+  border-radius: 8px; /* Rounded corners */
+  transition: border-color 0.3s; /* Smooth transition */
+}
+
+.container input[type="text"]:focus,
+.container input[type="email"]:focus,
+.container input[type="password"]:focus {
+  border-color: #00aaff; /* Bright blue shade on focus */
+  outline: none; /* Remove default outline */
+}
+
+/* Button */
+.container button {
+  width: 100%;
+  padding: 14px;
+  background-color: #00aaff; /* Bright blue button */
+  color: white;
+  border: none;
+  border-radius: 8px; /* Rounded corners */
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s; /* Smooth transition */
+}
+
+.container button:hover {
+  background-color: #0088cc; /* Darker blue shade on hover */
+}
+
+/* Link */
+.container p {
+  margin-top: 1rem;
+  color: #5c5c5c; /* Medium gray text */
+}
+
+.container a {
+  color: #00aaff; /* Bright blue link color */
+  text-decoration: none;
+  transition: color 0.3s; /* Smooth transition */
+}
+
+.container a:hover {
+  text-decoration: underline;
+  color: #0088cc; /* Darker blue shade on hover */
+}
+
